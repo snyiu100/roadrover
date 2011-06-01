@@ -16,52 +16,52 @@
 
         <button
 			toolTip="Eject"
-			mappingColor="0xd92161"
+			mappingColor="0xda2162"
 			onClick="1"
 		/>
         <button	
 			toolTip="Play"
-			mappingColor="0x21b04b"
+			mappingColor="0x22b14c"
 			onClick="2"
 		/>
         <button
 			toolTip="RW"
-			mappingColor="0xfef100"
+			mappingColor="0xfff200"
 			onClick="3"
 		/>
         <button
 			toolTip="FF"
-			mappingColor="0x00a1e7"
+			mappingColor="0x00a2e8"
 			onClick="4"
 		/>
         <button
 			toolTip="Menu"
-			mappingColor="0xa248a3"
+			mappingColor="0xa349a4"
 			onClick="5"
 		/>
         <button
 			toolTip="PWR"
-			mappingColor="0xec1b23"
+			mappingColor="0xed1c24"
 			onClick="6"
 		/>
         <button
 			toolTip="Navi"
-			mappingColor="0x3e47cb"
+			mappingColor="0x3f48cc"
 			onClick="7"
 		/>
         <button
 			toolTip="DVD"
-			mappingColor="0xb87956"
+			mappingColor="0xb97a57"
 			onClick="8"
 		/>
         <button
 			toolTip="FM/AM"
-			mappingColor="0xfec80d"
+			mappingColor="0xffc90e"
 			onClick="9"
 		/>
         <button
 			toolTip="OSD"
-			mappingColor="0xfeadc8"
+			mappingColor="0xffaec9"
 			onClick="10"
 		/>
     </view>
