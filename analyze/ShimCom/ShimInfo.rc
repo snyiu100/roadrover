@@ -1,0 +1,8 @@
+#include "ShimInfo.h"
+
+STRINGTABLE
+{
+    AVS_GENERATED_DESC "This shim was automatically generated"
+    AVS_GENERATED_FRIENDLY "Generated Verifier Stub"
+}
+
