@@ -14,9 +14,15 @@
 
 void LogToFile(LPCSTR filename, LPCSTR func, LPVOID data=NULL, DWORD size=0)
 {
-	if(data && size)
+	if(!data)
 	{
-		FILE* file = fopen ("\\com_log.txt", "ab");
+		FILE* file = fopen ("\\com_log.txt", "a");
+		fprintf(file, "\n%s (%s)\n", func, filename);
+		fclose(file);
+	}
+	else if(size)
+	{
+		FILE* file = fopen ("\\com_log.txt", "a");
 		fprintf(file, "\n%s (%s) size=%i\n", func, filename, size);
 		for(DWORD i=0; i<size;)
 		{
@@ -25,14 +31,14 @@ void LogToFile(LPCSTR filename, LPCSTR func, LPVOID data=NULL, DWORD size=0)
 			DWORD len = min(size - i, 16);
 			for(DWORD j=0; j<len; ++j, ++i)
 			{
-				char ch = ((LPBYTE)data)[i];
+				BYTE ch = ((LPBYTE)data)[i];
 				sprintf(&hex[j*3], "%.2X ", ch);
 				str[j] = ch > 0x20 && ch < 0x80 ? ch : '.';
 			}
 			str[len] = '\0';
 			fprintf(file, "%-48s\t%s\n", hex, str);
 		}
-		fclose (file);
+		fclose(file);
 	}
 }
 
