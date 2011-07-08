@@ -1,0 +1,39 @@
+COM2
+
+Парсинг инф. от COM2 (ParseData_fromCOM2):
+    строки начинаются с символов '$','@','#'
+    за '$' идут параметры 
+    строки парсятся в ParseParam:
+
+'@','#' - EventModify EVENT_SET
+'$'
+  'A' '0'-'9'
+    $A12345i
+    $A12345
+
+  'F' '0'-'9'
+    $F12345i
+    $F12345
+
+  'R' ':', '='
+    '=' $R=12345678.12345678
+
+
+
+  'r' ':'
+  'C' ':'
+  't' ':'
+  'K' ':' - return 0 -  не используется?
+  's' ':' - audio params (bass, middle, balance etc.) SetParam
+  'L' ':'
+  'O' ':'
+  'T' ':' 'A' ???
+  'i' XX XX XX  SendAppMsg
+    $iXXXXXX
+
+  'V' line[8]: 'S', 'X', ?    - slide, mcu_version   SetParam
+    $V??????S
+    $V??????X
+    $V???????
+
+  'I' ':' - id  SetParam
