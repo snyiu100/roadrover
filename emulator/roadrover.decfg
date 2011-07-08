@@ -4,18 +4,18 @@
         <CpuCore Reconfigurable="false">ARMv4</CpuCore>
         <CpuOptions Reconfigurable="false">TDI</CpuOptions>
         <VFP Reconfigurable="false">false</VFP>
-        <OSImage Reconfigurable="false" Address="30021000">roadrover.bin</OSImage>
+        <OSImage Reconfigurable="false" Address="0">roadrover.bin</OSImage>
         <MemSize Reconfigurable="false">128</MemSize>
-        <!-- <Flash Reconfigurable="false">Image.bin</Flash> -->
+        <!-- <Flash Reconfigurable="false">flash.bin</Flash> -->
     </Board>
     <Emulator>
         <FuncKey Reconfigurable="true">193</FuncKey>
-        <HostKey Reconfigurable="true">Left-Alt</HostKey>
-        <Language Reconfigurable="false">1033</Language>
-        <VMID Reconfigurable="false">{1E9A197B-C90E-4F20-87FF-79D57DC64511}</VMID>
+        <HostKey Reconfigurable="true">Right-Alt</HostKey>
+        <Language Reconfigurable="false">1049</Language>
+        <VMID Reconfigurable="false">{DF4F4AB4-13F7-41DD-B95D-8E940717F126}</VMID>
         <VMName Reconfigurable="true">Road Rover</VMName>
-        <Skin Reconfigurable="true" EnableSkin="true" ToolTips="on">.\skin\RoadRover.xml</Skin>
-        <!-- <Video Width="800" Height="480" BitsPerPixel="16" /> -->
+        <Video Reconfigurable="false" Width="800" Height="480" BitsPerPixel="16"/>
+        <!-- <Skin Reconfigurable="true" EnableSkin="true" ToolTips="on">.\skin\RoadRover.xml</Skin> -->
     </Emulator>
     <Peripherals>
         <SharedFolder Reconfigurable="true">..\..\..\SD</SharedFolder>
