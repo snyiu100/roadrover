@@ -7,6 +7,7 @@
 
 
 Logger logger;
+const char* filename = "\\com_log.txt";
 
 
 Logger::Logger()
@@ -22,37 +23,30 @@ Logger::~Logger()
 
 bool Logger::init()
 {
-	close();
-	file = fopen("\\com_log.txt", "a");
-	if(file)
-	{
-		fprintf(file, "\n--- Start ---\n");
-		return true;
-	}
-	return false;
+	return true;
 }
 
 void Logger::close()
 {
-	if(file) {
-		fprintf(file, "\n--- End ---\n");
-		fclose(file);
-		file = NULL;
-	}
 }
 
 void Logger::write(LPCSTR filename, LPCSTR func)
 {
-	if(file) {
-		fprintf(file, "\n%s (%s)\n", func, filename);
-	}
+	SYSTEMTIME st;
+	GetSystemTime(&st);
+	FILE* file = fopen(filename, "a");
+	fprintf(file, "\n%d:%d.%d\t%s (%s)\n", st.wMinute, st.wSecond, st.wMilliseconds, func, filename);
+	fclose(file);
 }
 
 void Logger::write(LPCSTR filename, LPCSTR func, LPVOID data, DWORD size)
 {
-    if(file && size)
+    if(size)
 	{
-		fprintf(file, "\n%s (%s) size=%i\n", func, filename, size);
+		SYSTEMTIME st;
+		GetSystemTime(&st);
+		FILE* file = fopen(filename, "a");
+		fprintf(file, "\n%d:%d.%d\t%s (%s) size=%i\n", st.wMinute, st.wSecond, st.wMilliseconds, func, filename, size);
 		for(DWORD i=0; i<size;)
 		{
 			char hex[49];
@@ -67,5 +61,6 @@ void Logger::write(LPCSTR filename, LPCSTR func, LPVOID data, DWORD size)
 			str[len] = '\0';
 			fprintf(file, "%-48s\t%s\n", hex, str);
 		}
+		fclose(file);
 	}
 }
