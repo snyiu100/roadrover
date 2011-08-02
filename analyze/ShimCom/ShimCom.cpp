@@ -2,45 +2,11 @@
 #include <map>
 #include <atlbase.h>
 #include <atlstr.h>
+#include "Logger.h"
 
 #ifdef UNDER_NT
 #	include <tchar.h>
 #endif
-
-#ifndef min
-#	define min(a,b)	(((a) < (b)) ? (a) : (b))
-#endif
-
-
-void LogToFile(LPCSTR filename, LPCSTR func, LPVOID data=NULL, DWORD size=0)
-{
-	if(!data)
-	{
-		FILE* file = fopen ("\\com_log.txt", "a");
-		fprintf(file, "\n%s (%s)\n", func, filename);
-		fclose(file);
-	}
-	else if(size)
-	{
-		FILE* file = fopen ("\\com_log.txt", "a");
-		fprintf(file, "\n%s (%s) size=%i\n", func, filename, size);
-		for(DWORD i=0; i<size;)
-		{
-			char hex[49];
-			char str[17];
-			DWORD len = min(size - i, 16);
-			for(DWORD j=0; j<len; ++j, ++i)
-			{
-				BYTE ch = ((LPBYTE)data)[i];
-				sprintf(&hex[j*3], "%.2X ", ch);
-				str[j] = ch > 0x20 && ch < 0x80 ? ch : '.';
-			}
-			str[len] = '\0';
-			fprintf(file, "%-48s\t%s\n", hex, str);
-		}
-		fclose(file);
-	}
-}
 
 
 typedef std::map<HANDLE, CStringA> Files;
@@ -68,9 +34,8 @@ HANDLE __stdcall APIHook_CreateFileW(
 	if(hFile != INVALID_HANDLE_VALUE && wcsstr(lpFileName, L"COM") == lpFileName)
 	{
 		files[hFile] = lpFileName;
-		LogToFile(files[hFile], "CreateFileW");
+		logger.write(files[hFile], "CreateFileW");
 	}
-
     return hFile;
 }
 
@@ -92,9 +57,8 @@ BOOL __stdcall APIHook_ReadFile(
 	Files::iterator it = files.find(hFile);
 	if(result == TRUE && it != files.end())
 	{
-		LogToFile(it->second, "ReadFile", lpBuffer, *lpNumberOfBytesRead);
+		logger.write(it->second, "ReadFile", lpBuffer, *lpNumberOfBytesRead);
 	}
-
     return result;
 }
 
@@ -116,9 +80,7 @@ BOOL __stdcall APIHook_WriteFile(
 	Files::iterator it = files.find(hFile);
 	if(it != files.end())
 	{
-		LogToFile(it->second, result == TRUE ? "WriteFile""WriteFile OK" : "WriteFile ERROR", lpBuffer, nNumberOfBytesToWrite);
+		logger.write(it->second, result == TRUE ? "WriteFile""WriteFile OK" : "WriteFile ERROR", lpBuffer, nNumberOfBytesToWrite);
 	}
-
     return result;
 }
-
