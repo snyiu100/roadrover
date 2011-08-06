@@ -107,6 +107,8 @@
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_watson_xfer" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_wceload" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_xpskin" />
+    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_as_file" />
+    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_as_base" />
   </FeatureCollection>
   <ConfigurationCollection Name="Configurations" EnforceUniqueItems="False">
     <Configuration Name="Item" TargetBinFilename="nk.bin" BuildType="Debug" FriendlyName="Device Emulator ARMV4I Debug">
