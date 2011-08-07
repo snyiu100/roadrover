@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{A9579C99-2FCB-404B-BD28-4858F56A8BA4}") = "RREmul", "RREmul\RREmul.pbxml", "{CD238202-1D6C-42B0-BB4E-EF5CC2AEB9EF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Device Emulator ARMV4I Debug|Platform Builder (_TGTCPU) = Device Emulator ARMV4I Debug|Platform Builder (_TGTCPU)
+		Device Emulator ARMV4I Release|Platform Builder (_TGTCPU) = Device Emulator ARMV4I Release|Platform Builder (_TGTCPU)
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD238202-1D6C-42B0-BB4E-EF5CC2AEB9EF}.Device Emulator ARMV4I Debug|Platform Builder (_TGTCPU).ActiveCfg = Device Emulator ARMV4I Debug|Platform Builder (_TGTCPU)
+		{CD238202-1D6C-42B0-BB4E-EF5CC2AEB9EF}.Device Emulator ARMV4I Debug|Platform Builder (_TGTCPU).Build.0 = Device Emulator ARMV4I Debug|Platform Builder (_TGTCPU)
+		{CD238202-1D6C-42B0-BB4E-EF5CC2AEB9EF}.Device Emulator ARMV4I Release|Platform Builder (_TGTCPU).ActiveCfg = Device Emulator ARMV4I Release|Platform Builder (_TGTCPU)
+		{CD238202-1D6C-42B0-BB4E-EF5CC2AEB9EF}.Device Emulator ARMV4I Release|Platform Builder (_TGTCPU).Build.0 = Device Emulator ARMV4I Release|Platform Builder (_TGTCPU)
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

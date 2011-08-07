@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<DeviceEmulator xmlns="http://schemas.microsoft.com/DeviceEmulator/2006/01/DeCfg">
+    <Board>
+        <CpuCore Reconfigurable="false">ARMv4</CpuCore>
+        <CpuOptions Reconfigurable="false">TDI</CpuOptions>
+        <VFP Reconfigurable="false">false</VFP>
+        <OSImage Reconfigurable="false" Address="0">roadrover.bin</OSImage>
+        <MemSize Reconfigurable="false">128</MemSize>
+        <!-- <Flash Reconfigurable="false">flash.bin</Flash> -->
+    </Board>
+    <Emulator>
+        <FuncKey Reconfigurable="true">193</FuncKey>
+        <HostKey Reconfigurable="true">Right-Alt</HostKey>
+        <Language Reconfigurable="false">1049</Language>
+        <VMID Reconfigurable="false">{DF4F4AB4-13F7-41DD-B95D-8E940717F126}</VMID>
+        <VMName Reconfigurable="true">Road Rover</VMName>
+        <Video Reconfigurable="false" Width="800" Height="480" BitsPerPixel="16"/>
+        <!-- <Skin Reconfigurable="true" EnableSkin="true" ToolTips="on">.\skin\RoadRover.xml</Skin> -->
+    </Emulator>
+    <Peripherals>
+        <SharedFolder Reconfigurable="true">..\..\..\SD</SharedFolder>
+        <SerialPort Reconfigurable="true" UARTNumber="0">none</SerialPort>
+        <SerialPort Reconfigurable="true" UARTNumber="1">none</SerialPort>
+        <SerialPort Reconfigurable="true" UARTNumber="2">none</SerialPort>
+    </Peripherals>
+</DeviceEmulator>

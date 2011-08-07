@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<skin>
+    <view
+		titleBar ="RoadRover"
+		
+		displayPosX="194"
+		displayPosY="162"
+		
+		displayWidth="800"
+		displayHeight="480"
+		displayDepth="16"
+
+		mappingImage="RoadRover_mask.png"
+		normalImage="RoadRover_up.png"
+		downImage= "RoadRover_down.png">
+
+        <button
+			toolTip="Eject"
+			mappingColor="0xda2162"
+			onClick="1"
+		/>
+        <button	
+			toolTip="Play"
+			mappingColor="0x22b14c"
+			onClick="2"
+		/>
+        <button
+			toolTip="Rewind"
+			mappingColor="0xfff200"
+			onClick="3"
+		/>
+        <button
+			toolTip="Fast Forward"
+			mappingColor="0x00a2e8"
+			onClick="4"
+		/>
+        <button
+			toolTip="Menu"
+			mappingColor="0xa349a4"
+			onClick="5"
+		/>
+        <button
+			toolTip="Power"
+			mappingColor="0xed1c24"
+			onClick="6"
+		/>
+        <button
+			toolTip="Navi menu"
+			mappingColor="0x3f48cc"
+			onClick="7"
+		/>
+        <button
+			toolTip="DVD"
+			mappingColor="0xb97a57"
+			onClick="8"
+		/>
+        <button
+			toolTip="Radio"
+			mappingColor="0xffc90e"
+			onClick="9"
+		/>
+        <button
+			toolTip="On-Screen Display menu"
+			mappingColor="0xffaec9"
+			onClick="10"
+		/>
+    </view>
+</skin>
