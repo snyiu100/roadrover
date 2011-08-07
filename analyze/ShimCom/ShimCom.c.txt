@@ -1,6 +1,0 @@
-OriginalDll=C:\Projects\RREmul\RREmul\RelDir\DeviceEmulator_ARMV4I_Release\coredll.dll
-OutputFile=C:\Projects\ShimCom\ShimCom.c
-DllName ApiName Ordinal
-coredll.dll CreateFileW 168
-coredll.dll ReadFile 170
-coredll.dll WriteFile 171

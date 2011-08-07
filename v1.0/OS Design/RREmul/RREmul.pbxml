@@ -15,9 +15,11 @@
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_cursor" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_eap" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fsreplbit" />
+    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_help" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_iabase" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_ie_jscript" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_menu_overlap" />
+    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_msim" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_notify" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_pm" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_redir" />
@@ -26,6 +28,9 @@
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_touch" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dotnetv2" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dotnetv2_support" />
+    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_cachefilt" />
+    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_as_base" />
+    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_as_file" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_modem" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_ppp" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_ethernet" />
@@ -35,80 +40,6 @@
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_atl" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_urlmon" />
     <Feature Name="Item" CatalogItemId="Item:MS:sysgen_ole_guids" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_acm_gsm610" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_acm_msfilter" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_binfs" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_ceplayer" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_connmgr" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dcom" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_ddraw" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_acmwrap" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_avi" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_capture" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_dmo" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_errors" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_imaadpcm" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_mp3" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_mpega" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_mpegv" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_msadpcm" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_msg711" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_msgsm610" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wav" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_waveout" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wma" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wma_voice" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmt_asxv1" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmt_asxv2" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmt_asxv3" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmt_http" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmt_local" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmt_mms" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmt_multi" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmt_nsc" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_dshow_wmv" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_exfat" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fatfs" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fatutil_noui" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fiber" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fonts_arialbd_1_08" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fonts_arial_1_08" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fonts_courbd" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fonts_cour_1_30" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fonts_tahomabd_1_08" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fonts_tahoma_1_08" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fonts_wingding" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_fsreghive" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_gdi_alphablend" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_iesample" />
-    <Feature Name="Item" CatalogItemId="Item:MS:SYSGEN_IE_TILEENGINE" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_largekb" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_localaudio" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_mediaapps_wmpocx" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_sdbus" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_sd_memory" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_smartcard" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_solitare" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_storemgr_cpl" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_streamaudio" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_streamav" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_tcpip6" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_tfat" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_udfs" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_usb" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_usbfn" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_usbfn_ethernet" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_usb_hid" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_usb_hid_clients" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_usb_printer" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_usb_smartcard" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_usb_storage" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_watson_dmpgen" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_watson_xfer" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_wceload" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_xpskin" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_as_file" />
-    <Feature Name="Item" CatalogItemId="Item:MS:sysgen_as_base" />
   </FeatureCollection>
   <ConfigurationCollection Name="Configurations" EnforceUniqueItems="False">
     <Configuration Name="Item" TargetBinFilename="nk.bin" BuildType="Debug" FriendlyName="Device Emulator ARMV4I Debug">

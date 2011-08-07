@@ -1,8 +1,0 @@
-#include "ShimInfo.h"
-
-STRINGTABLE
-{
-    AVS_GENERATED_DESC "This shim writes COM data to file."
-    AVS_GENERATED_FRIENDLY "COM Logger"
-}
-
