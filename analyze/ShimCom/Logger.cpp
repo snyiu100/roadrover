@@ -7,7 +7,8 @@
 
 
 Logger logger;
-const char* filename = "\\com_log.txt";
+const char* logFilename = "\\com_log.txt";
+//const char* logFilename = "\\Storage Card\\com_log.txt";
 
 
 Logger::Logger()
@@ -34,8 +35,8 @@ void Logger::write(LPCSTR filename, LPCSTR func)
 {
 	SYSTEMTIME st;
 	GetSystemTime(&st);
-	FILE* file = fopen(filename, "a");
-	fprintf(file, "\n%d:%d.%d\t%s (%s)\n", st.wMinute, st.wSecond, st.wMilliseconds, func, filename);
+	FILE* file = fopen(logFilename, "a");
+	fprintf(file, "\n%.2d:%.2d.%.2d  %s (%s)\n", st.wMinute, st.wSecond, st.wMilliseconds, func, filename);
 	fclose(file);
 }
 
@@ -45,8 +46,8 @@ void Logger::write(LPCSTR filename, LPCSTR func, LPVOID data, DWORD size)
 	{
 		SYSTEMTIME st;
 		GetSystemTime(&st);
-		FILE* file = fopen(filename, "a");
-		fprintf(file, "\n%d:%d.%d\t%s (%s) size=%i\n", st.wMinute, st.wSecond, st.wMilliseconds, func, filename, size);
+		FILE* file = fopen(logFilename, "a");
+		fprintf(file, "\n%.2d:%.2d.%.2d  %s (%s) size=%i\n", st.wMinute, st.wSecond, st.wMilliseconds, func, filename, size);
 		for(DWORD i=0; i<size;)
 		{
 			char hex[49];
@@ -59,7 +60,7 @@ void Logger::write(LPCSTR filename, LPCSTR func, LPVOID data, DWORD size)
 				str[j] = ch > 0x20 && ch < 0x80 ? ch : '.';
 			}
 			str[len] = '\0';
-			fprintf(file, "%-48s\t%s\n", hex, str);
+			fprintf(file, "\t%-48s\t%s\n", hex, str);
 		}
 		fclose(file);
 	}

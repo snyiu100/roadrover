@@ -4,6 +4,7 @@
 	Version="8,00"
 	Name="ShimCom"
 	ProjectGUID="{221D5926-D4E5-40BF-9165-BA8D3DAEE7BC}"
+	RootNamespace="ShimCom"
 	Keyword="Win32Proj"
 	>
 	<Platforms>
@@ -90,7 +91,7 @@
 			/>
 			<DeploymentTool
 				ForceDirty="-1"
-				RemoteDirectory=""
+				RemoteDirectory="\Storage Card\cetk"
 				RegisterOutput="0"
 				AdditionalFiles=""
 			/>

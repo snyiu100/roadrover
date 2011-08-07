@@ -80,7 +80,7 @@ BOOL __stdcall APIHook_WriteFile(
 	Files::iterator it = files.find(hFile);
 	if(it != files.end())
 	{
-		logger.write(it->second, result == TRUE ? "WriteFile""WriteFile OK" : "WriteFile ERROR", lpBuffer, nNumberOfBytesToWrite);
+		logger.write(it->second, result == TRUE ? "WriteFile OK" : "WriteFile ERROR", lpBuffer, nNumberOfBytesToWrite);
 	}
     return result;
 }
