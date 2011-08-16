@@ -8,7 +8,7 @@ def bin2str(b):
     return ' '.join( map(lambda x: hex(ord(x))[2:], b) )
 
 
-class SerialPort(serial.Serial):
+class SerialPort(serial.Win32Serial, serial.FileLike):
     def __init__(self, *args, **kwargs):
         super(SerialPort, self).__init__(*args, **kwargs)
         self.flushInput()
@@ -19,8 +19,15 @@ class SerialPort(serial.Serial):
             print '>', msg
             self.write( str2bin(msg) )
 
-    def recvMsg(self):
+    def recvMsg_(self):
         data = self.read(128)
+        if len(data):
+            print '<', bin2str(data)
+            return True
+        return False
+
+    def recvMsg(self):
+        data = self.readline(eol='\xFF')
         if len(data):
             print '<', bin2str(data)
             return True
